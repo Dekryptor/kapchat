@@ -1,0 +1,151 @@
+body{
+   color: #333;
+   padding: 0;
+   margin: 0;
+   font-family: 'Verdana', sans-serif;
+}
+#kapchat a:link, #kapchat a:visited{
+   color: #009961;
+   text-decoration: none;
+}
+#kapchat a:hover{
+   color: #e21f4f;
+}
+div#kapchat_header{
+   margin: 0 0 5px 0;
+   padding: 0;
+   font-size: 9px;
+   font-style: italic;
+}
+div#kapchat_menu{
+   background:url('../images/kapchat_logo.png') no-repeat;
+   text-align: right;
+}
+div#kapchat_main{
+   padding: 10px;
+   position: relative;
+   z-index: 0;
+}
+div#kapchat_error_box, div#kapchat_emoticons_box, div#kapchat_settings_box{
+   background-color: #EEE;
+   margin: 0;
+   padding: 10px;
+   font-size: 11px;
+   text-align: center;
+   display: none;
+}
+div#kapchat_footer{
+   padding: 10px;
+   font-size: 9px;
+   font-style: italic;
+}
+div.kapchat_message {
+   background-color: #EEE;
+   margin-bottom: 5px;
+   padding: 5px;
+   font-size: 11px;
+   word-wrap: break-word;
+   border-radius: 5px;
+}
+#kapchat input{
+   font-size: 11px;
+}
+input#kapchat_nick{
+   font-weight: bold;
+}
+input.kapchat_short{
+   background-color: #fff;
+   border: solid 2px #999;
+   padding: 5px;
+   width: 200px;
+   margin-bottom: 5px;
+   color: #333;
+   box-shadow: 0 0 3px #555;
+   border-radius: 3px;
+}
+input.kapchat_submit{
+   background-color: #00618e;
+   border: solid 2px #00618e;
+   padding: 5px;
+   margin-bottom: 5px;
+   font-weight: bold;
+   color: #FFF;
+   box-shadow: 0 0 3px #555;
+   border-radius: 3px;
+}
+p.kapchat_nick{
+   margin: 0 0 3px 0;
+   padding: 0;
+   font-weight: bold;
+   color: #00618e;
+}
+p.kapchat_message {
+   margin: 0 0 3px 0;
+   padding: 0;
+}
+p.kapchat_ago{
+   margin: 0;
+   padding: 0;
+   text-align: right;
+   font-size: 9px;
+   color: #888;
+}
+img.kapchat_menu{
+   margin-left: 5px;
+   -webkit-filter: grayscale(100%);
+   filter: grayscale(100%);
+   filter: url(#greyscale);
+   filter: gray;
+}
+img.kapchat_menu:hover{
+   -webkit-filter: none;
+   filter: none;
+}
+a.kapchat_color{
+   display: inline-block;
+   width: 20px;
+   height: 20px;
+   padding: 0;
+   margin: 0;
+   border: solid 3px #EEE;
+   border-radius: 5px;
+}
+a.kapchat_color:hover, #kapchat .selected{
+   border-color: #00618e;
+}
+#kapchat h2{
+   font-size: 11px;
+   font-weight: normal;
+   margin: 0 0 10px 0;
+   padding: 0;
+}
+img.kapchat_menu_emoticon{
+   padding: 2px;
+   margin: 5px;
+   border: solid 3px #EEE;
+}
+img.kapchat_menu_emoticon:hover{
+   border-color: #00618e;
+}
+img.kapchat_image{
+   max-width: 100%;
+   margin: 10px 0;
+}
+.kapchat_iframe {
+   position: relative;
+   margin: 10px 0;
+}
+.kapchat_iframe img {
+   display:block;
+   width:100%;
+   max-width: 640px;
+   height:auto;
+}
+.kapchat_iframe iframe {
+   position:absolute;
+   top:0;
+   left:0;
+   width:100%;
+   max-width: 640px;
+   height:100%;
+}

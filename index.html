@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>KAP CHAT</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="manifest" href="manifest.json">
+    <!-- STYLE -->
+    <link rel="stylesheet" type="text/css" href="kapchat_files/style/light.css" />
+    <!-- BIBLIOTEKI JS -->
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src='kapchat_files/js/libs/timer.js' type='text/javascript'></script>
+    <script src='kapchat_files/js/libs/cookie.js' type='text/javascript'></script>
+    <!-- WŁASNE JS -->
+    <script src='kapchat_files/kapchat_config.js' type='text/javascript'></script>
+    <script src='kapchat_files/js/kapchat_functions.js' type='text/javascript'></script>
+    <script src='kapchat_files/js/kapchat.js' type='text/javascript'></script>
+    <!-- ICONS -->
+    <link rel="icon" sizes="192x192" href="kapchat_files/images/icon192.png">
+    <link rel="icon" sizes="128x128" href="kapchat_files/images/icon128.png">
+    <link rel="apple-touch-icon" sizes="128x128" href="kapchat_files/images/icon128.png">
+    <link rel="apple-touch-icon-precomposed" sizes="128x128" href="kapchat_files/images/icon128.png">
+    <link rel="shortcut icon" href="kapchat_files/images/icon72.png">
+</head>
+<body>
+    <div id="kapchat">
+        <!-- POPUPS -->
+        <div id="kapchat_error_box">
+            <h2 id="kapchat_error_message">Błąd...</h2>
+            <a id="kapchat_error_close" href="">ZAMKNIJ</a>
+        </div>
+        <!-- POPUPS END -->
+        <!-- EMOTICONS -->
+        <div id="kapchat_emoticons_box">
+            <h2>Wstaw emotikonę:</h2>
+            <p id="kapchat_emoticons">
+            </p>
+            <a id="kapchat_emoticons_close" href="">ZAMKNIJ</a>
+        </div>
+        <!-- EMOTICONS -->
+        <!-- SETTINGS -->
+        <div id="kapchat_settings_box">
+            <h2>Twój kolor:</h2>
+            <p>
+                <a class="kapchat_color" style="background-color: #b9714a" href="#b9714a"></a>
+                <a class="kapchat_color" style="background-color: #fd6500" href="#fd6500"></a>
+                <a class="kapchat_color" style="background-color: #ed1c24" href="#ed1c24"></a>
+                <a class="kapchat_color" style="background-color: #ff3577" href="#ff3577"></a>
+                <a class="kapchat_color" style="background-color: #b04fb0" href="#b04fb0"></a>
+                <a class="kapchat_color" style="background-color: #9f40ff" href="#9f40ff"></a>
+                <a class="kapchat_color" style="background-color: #3f48cc" href="#3f48cc"></a>
+                <a class="kapchat_color" style="background-color: #00a2e8" href="#00a2e8"></a>
+                <a class="kapchat_color" style="background-color: #22b14c" href="#22b14c"></a>
+                <a class="kapchat_color" style="background-color: #82a202" href="#82a202"></a>
+            </p>
+            <a id="kapchat_settings_close" href="">ZAMKNIJ</a>
+        </div>
+        <!-- SETTINGS -->
+        <!-- CHAT -->
+        <div id="kapchat_main">
+            <div id="kapchat_header">
+                <div id="kapchat_menu">
+                    <a id="kapchat_emoticons_open" href=""><img class="kapchat_menu" src="kapchat_files/images/emoticons.png"/></a>
+                    <a id="kapchat_settings_open" href=""><img class="kapchat_menu" src="kapchat_files/images/settings.png"/></a>
+                </div>
+            </div>
+            <div id="kapchat_add_message">
+                <form id="kapchat_add_mess" action="" method="post">
+                    <input id="kapchat_nick" class="kapchat_short" type="text" name="nick" maxlength="30" placeholder="nick" required/>
+                    <input id="kapchat_mess" class="kapchat_short" type="text" name="message" maxlength="500" placeholder="napisz coś..." required/>
+                    <input id="kapchat_nick_color" type="hidden" name="color" value=""/>
+                    <input id="kapchat_send" class="kapchat_submit" type="submit" value="OK"/>
+                </form>
+            </div>
+            <!--szablon bloku wiadomości - nie wyświetla się bezpośrednio-->
+            <div id="kapchat_messages_skeleton" style="display: none">
+                <div class="kapchat_message">
+                    <p class="kapchat_id" style="display: none">{id}</p>
+                    <p class="kapchat_nick">{nick}</p>
+                    <p class="kapchat_message">{message}</p>
+                    <p class="kapchat_ago" timestamp="{timestamp}">{ago}</p>
+                </div>
+            </div>
+            <!--koniec szablonu bloku wiadomości-->
+            <!--szablon wiadomości video - nie wyświetla się bezpośrednio-->
+            <div id="kapchat_iframe_skeleton" style="display: none">
+                <div class="kapchat_iframe">
+                    <img src="kapchat_files/images/placeholder.png"/>
+                    <iframe src="{iframe_src}" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <a href="{video_url}">obejrzyj na {website}</a>
+            </div>
+            <!--koniec szablonu wiadomości video-->
+            <div id="kapchat_messages">
+                <!--tu jest wstawiana docelowa treść-->
+            </div>
+        </div>
+        <!-- CHAT END -->
+        <!-- FOOTER -->
+        <div id="kapchat_footer">
+            KAP CHAT v1.7 by kap
+        </div>
+        <!-- FOOTER END -->
+    </div>
+</body>
+</html>
