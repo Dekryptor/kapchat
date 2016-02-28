@@ -1,4 +1,5 @@
 ![alt text](http://appst.pl/gallery/kapchat.png "KAP CHAT LOGO")
+
 Simple ajax chat
 
 ###Screenshots:
